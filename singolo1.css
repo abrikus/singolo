@@ -152,6 +152,7 @@ body {
 
 .slider-content__arrow {
   cursor: pointer;
+  margin-left: 4px;
 }
 
 .slider-content__img {
@@ -206,6 +207,7 @@ body {
   height: 9.3rem;
   overflow: hidden;
   position: relative;
+  margin-right: 2px;
 }
 
 .services__logo {
