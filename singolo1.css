@@ -88,6 +88,8 @@ body {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  margin-top: -2px;
+  margin-left: 2px;
 }
 
 .logo {
@@ -116,6 +118,10 @@ body {
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
+}
+
+.nav__item__selected {
+  color: #f06c64;
 }
 
 .nav__item:not(:last-child)::after {
@@ -195,7 +201,6 @@ body {
 }
 .services__item {
   margin-bottom: 30px;
-  width: 33%;
   padding-left: 7.9rem;
   width: 30.2rem;
   height: 9.3rem;
@@ -207,13 +212,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
-  padding: 15px;
+  position: absolute;
+  width: 59px;
+  height: 59px;
   border: 2px solid #666d89;
   border-radius: 50%;
-
-  position: absolute;
   top: 5px;
   left: 3px;
 }
