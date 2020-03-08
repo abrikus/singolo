@@ -1,7 +1,7 @@
 .quote {
   padding: 66px 0 6px;
   background-color: #f06c64;
-  border: solid 6px #ea676b;
+  border-bottom: solid 6px #ea676b;
 }
 
 .quote__heading {
@@ -58,6 +58,8 @@
 .contacts__textarea {
   resize: none;
   height: 202px;
+  padding-top: 8px;
+  letter-spacing: 0.17px;
 }
 
 .contacts__info {
