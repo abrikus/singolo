@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   max-width: 940px;
-  margin-bottom: 43px;
+  margin-bottom: -1px;
 }
 
 .contacts__form {
@@ -60,6 +60,24 @@
   height: 202px;
   padding-top: 8px;
   letter-spacing: 0.17px;
+}
+
+.button {
+  display: block;
+  font-family: 'Lato Regular', sans-serif;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: solid 1px #d6564f;
+  background-color: #d6564f;
+  color: #f48c8f;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #a7413c;
+  border: solid 1px #a7413c;
 }
 
 .contacts__info {
