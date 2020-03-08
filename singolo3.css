@@ -1,0 +1,136 @@
+.quote {
+  padding: 66px 0 6px;
+  background-color: #f06c64;
+  border: solid 6px #ea676b;
+}
+
+.quote__heading {
+  margin-bottom: 27px;
+  font-size: 3.0rem;
+  font-family: "Lato Black", sans-serif;
+  color: #f0d8d9;
+  line-height: 17.86px;
+  letter-spacing: -0.4px;
+}
+
+.quote__text {
+  margin-bottom: 43px;
+  font-family: 'Lato Light', sans-serif;
+  font-size: 1.8rem;
+  line-height: 30px;
+  color: #f0d8d9;
+  text-align: justify;
+  max-width: 940px;
+}
+
+.quote__contacts {
+  display: flex;
+  justify-content: space-between;
+  max-width: 940px;
+  margin-bottom: 43px;
+}
+
+.contacts__form {
+  width: 66.66%;
+  padding-right: 9px;
+}
+
+.contacts__input {
+  display: block;
+  font-family: 'Lato Regular', sans-serif;
+  padding: 12px 15px;
+  margin-bottom: 16px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #d6564f;
+  border: none;
+  color: #f48c8f;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.contacts__input::placeholder {
+  color: #f48c8f;
+  font-family: 'Lato Regular', sans-serif;
+  font-size: 1.2rem;
+}
+
+.contacts__textarea {
+  resize: none;
+  height: 202px;
+}
+
+.contacts__info {
+  width: 33.33%;
+  padding-left: 12px;
+}
+
+.contacts__info_heading {
+  margin-bottom: 7px;
+  font-family: "Lato Black", sans-serif;
+  font-size: 1.8rem;
+  color: #f0d8d9;
+}
+
+.contacts__info_text {
+  margin-bottom: 22px;
+  max-width: 300px;
+  color: #f0d8d9;
+  font-family: 'Lato Regular', sans-serif;
+  font-size: 12px;
+  line-height: 21.5px;
+  text-align: justify;
+  letter-spacing: -0.2px;
+}
+
+.contacts__location_item {
+  padding-left: 2px;
+  margin-bottom: 3px;
+}
+.contacts__location_item:first-child {
+  padding-left: 4px;
+}
+
+.contacts__location_item:first-child img {
+  margin-right: 9px;
+}
+
+.contacts__location_item:last-child {
+  margin-top: 3px;
+  padding-left: 1px;
+}
+
+.contacts__location_item img {
+  margin-right: 8px;
+}
+
+.location_item-text {
+  text-decoration: none;
+  color: #f0d8d9;
+  font-family: 'Lato regular', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: -0.2px;
+}
+
+.footer {
+  background-color: #2d303a;
+}
+
+.footer__copyright {
+  padding-top: 16px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666d89;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 19px;
+}
+
+.footer__social-icons {
+  margin-top: 22px;
+  margin-right: 5px;
+}
