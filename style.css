@@ -416,8 +416,8 @@ body {
   font-size: 3.0rem;
   font-family: "Lato Black", sans-serif;
   color: #f0d8d9;
-  line-height: 17.86px;
-  letter-spacing: -0.4px;
+  line-height: 17.8px;
+  letter-spacing: -0.1px;
 }
 
 .quote__text {
@@ -518,7 +518,6 @@ body {
   color: #f0d8d9;
   font-family: 'Lato regular', sans-serif;
   font-size: 1.2rem;
-  letter-spacing: -0.2px;
 }
 
 .footer {
