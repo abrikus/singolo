@@ -114,14 +114,19 @@ body {
 .nav__item {
   font-size: 1.2rem;
   letter-spacing: -0.02rem;
-  font-weight: 700;
+  /* font-weight: 700; */
   text-transform: uppercase;
-  color: #fff;
   cursor: pointer;
 }
 
-.nav__item__selected {
+.nav__item_link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__item_link__selected {
   color: #f06c64;
+  text-decoration: none;
 }
 
 .nav__item:not(:last-child)::after {
@@ -132,7 +137,7 @@ body {
   margin-left: 13px;
 }
 
-.nav__item:hover {
+.nav__item_link:hover {
   color: #f06c64;
 }
 
