@@ -48,3 +48,57 @@ arrowNext.addEventListener('click', function() {
 });
 
 showSlides(slideIndex);
+
+const portfolioTabs = document.querySelectorAll('.portfolio__list_item');
+const portfolioImgs = document.querySelectorAll('.portfolio__img');
+
+portfolioTabs.forEach(item => {
+  item.addEventListener('click', () => {
+    portfolioTabs.forEach(item => {
+      item.classList.remove('portfolio__list_item-selected');
+    });
+    item.classList.add('portfolio__list_item-selected');
+    portfolioImgs.forEach(item => {
+      item.classList.remove('portfolio__img-selected');
+    });
+  });
+});
+
+portfolioImgs.forEach(item => {
+  item.addEventListener('click', () => {
+    portfolioImgs.forEach(item => {
+      item.classList.remove('portfolio__img-selected');
+    });
+    item.classList.add('portfolio__img-selected');
+  });
+});
+
+const portfolioPrj = document.querySelectorAll('.portfolio__projects');
+const portfolioTabsList = document.querySelector('.portfolio__list');
+
+function hideImgs (n) {
+  for (let i = n; i < portfolioPrj.length; i++) {
+    portfolioPrj[i].classList.remove('show');
+    portfolioPrj[i].classList.add('hidden');
+  }
+}
+
+function showImgs (num) {
+  if (portfolioPrj[num].classList.contains('hidden')) {
+    portfolioPrj[num].classList.remove('.hidden');
+    portfolioPrj[num].classList.add('show');
+  }
+}
+
+hideImgs (1);
+
+portfolioTabsList.addEventListener('click', function(event) {
+  if (event.target.classList.contains('portfolio__list_item')) {
+    for (let i = 0; i < portfolioTabs.length; i++) {
+      if (event.target == portfolioTabs[i]) {
+        hideImgs(0);
+        showImgs(i);
+      }
+    }
+  }
+})

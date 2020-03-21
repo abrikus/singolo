@@ -349,6 +349,18 @@ body {
   overflow: hidden;
 }
 
+.portfolio__img-selected {
+  border: solid 5px #F06C64;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
 .about {
   padding: 59px 0 64px;
   background-color: #f2f2f2;
