@@ -102,3 +102,32 @@ portfolioTabsList.addEventListener('click', function(event) {
     }
   }
 })
+
+const submitBtn = document.querySelector('.button');
+const okBtn = document.querySelector('.btn');
+const subject = document.querySelector('.message__subject');
+const describe = document.querySelector('.message__describe');
+const form = document.querySelector('.contacts__form');
+const messageForm = document.querySelector('.contacts__message');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const inputSubject = document.querySelector('.contacts__subject');
+  const inputDescribe = document.querySelector('.contacts__textarea');
+  if (inputSubject.value != '') {
+    subject.textContent = `Subject: ${inputSubject.value}`;
+  } else {
+    subject.textContent = 'Without subject';
+  };
+  if (inputDescribe.value != '') {
+    describe.textContent = `Description: ${inputDescribe.value}`;
+  } else {
+    describe.textContent = 'Without description';
+  }
+  messageForm.style.display = 'flex';
+});
+
+okBtn.addEventListener('click', () => {
+  messageForm.style.display = 'none';
+  form.reset();
+})

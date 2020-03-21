@@ -320,13 +320,21 @@
         tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="quote__contacts">
         <form class="contacts__form" action="#" method="post">
-          <input type="text" class="contacts__input" placeholder="Name (Required)">
-          <input type="text" class="contacts__input" placeholder="Email (Required)">
-          <input type="text" class="contacts__input" placeholder="Subject">
-          <textarea name="about" class="contacts__input contacts__textarea" id="" 
-          cols="30" rows="10" placeholder="Describe your object in detail..."></textarea>
+          <input type="text" class="contacts__input" placeholder="Name (Required)" required>
+          <input type="text" class="contacts__input" placeholder="Email (Required)" required>
+          <input type="text" class="contacts__input contacts__subject" placeholder="Subject">
+          <textarea name="about" class="contacts__input contacts__textarea"
+          cols="30" rows="10" maxlength="400" placeholder="Describe your object in detail..."></textarea>
           <button type="submit" class="button">Submit</button>
         </form>
+        <div class="contacts__message">
+          <div class="message">
+            <h2>The letter was sent</h2>
+            <div class="message__text message__subject"></div>
+            <div class="message__text message__describe"></div>
+            <button class="btn" id="ok">OK</button>
+          </div>
+        </div>
         <div class="contacts__info">
           <h4 class="contacts__info_heading">Contact Information</h4>
           <p class="contacts__info_text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. 
