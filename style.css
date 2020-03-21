@@ -552,6 +552,8 @@ body {
 }
 
 .message {
+  font-family: 'Lato-Light', sans-serif;
+  font-size: 18px;
   position: fixed;
   top: 20%;
   left: 38%;
@@ -567,6 +569,10 @@ body {
   max-height: 90%;
   overflow: hidden;
   padding: 30px;
+}
+
+.message__text {
+  padding-top: 10px;
 }
 
 .btn {
