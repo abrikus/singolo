@@ -1,4 +1,6 @@
 const href = document.querySelectorAll('.nav__item_link');
+const header = document.querySelector('.header');
+const anchors = document.querySelectorAll('a[href*="#"]');
 
 href.forEach(item => {
   item.addEventListener('click', () => {
@@ -8,6 +10,66 @@ href.forEach(item => {
     item.classList.add('nav__item_link__selected');
   });
 });
+
+anchors.forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+    let anchorName = this.getAttribute('href').substring(1);
+    const scrollTo = document.getElementById(anchorName);
+    const position = scrollTo.getBoundingClientRect().top;
+    const offset = position - 73;
+    window.scrollBy({
+      top: offset,
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+})
+
+window.onload = () => {
+  const heightP = document.querySelector('.portfolio').offsetHeight;
+  const heightSer = document.querySelector('.services').offsetHeight;
+  const heightSl = document.querySelector('.slider').offsetHeight;
+  const heightA = document.querySelector('.about').offsetHeight;
+  const heightQ = document.querySelector('.quote').offsetHeight;
+
+  window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > 98) {
+      header.classList.add('header-fixed');
+    } else {
+      header.classList.remove('header-fixed');
+    }
+
+    if (scrollPosition > heightSl + heightSer + heightP + heightA) {
+      href.forEach(item => {
+        item.classList.remove('nav__item_link__selected');
+      });
+      href[4].classList.add('nav__item_link__selected');
+    } else if (scrollPosition > heightSl + heightSer + heightP - 90) {
+      href.forEach(item => {
+        item.classList.remove('nav__item_link__selected');
+      });
+      href[3].classList.add('nav__item_link__selected');
+    } else if (scrollPosition > heightSl + heightSer - 90) {
+      href.forEach(item => {
+        item.classList.remove('nav__item_link__selected');
+      });
+      href[2].classList.add('nav__item_link__selected');
+    } else if (scrollPosition > heightSl - 90) {
+      href.forEach(item => {
+        item.classList.remove('nav__item_link__selected');
+      });
+      href[1].classList.add('nav__item_link__selected');
+    } else {
+      href.forEach(item => {
+        item.classList.remove('nav__item_link__selected');
+      });
+      href[0].classList.add('nav__item_link__selected');
+    }
+  });
+}
+
 
 let slideIndex = 1;
 const slides = document.querySelectorAll('.slider__item');
@@ -39,12 +101,10 @@ function currentSlide(n) {
 
 arrowPrev.addEventListener('click', function() {
   changeSlide(-1);
-  // slider.classList.toggle('slider-blue');
 });
 
 arrowNext.addEventListener('click', function() {
   changeSlide(1);
-  // slider.classList.toggle('slider-blue');
 });
 
 showSlides(slideIndex);

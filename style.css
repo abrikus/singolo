@@ -84,6 +84,16 @@ body {
   padding: 34px 0 30px;
 }
 
+.header-fixed {
+  padding: 20px 0;
+  height: 73px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
 .header-wrapper {
   display: flex;
   align-items: baseline;
@@ -114,7 +124,6 @@ body {
 .nav__item {
   font-size: 1.2rem;
   letter-spacing: -0.02rem;
-  /* font-weight: 700; */
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -198,14 +207,51 @@ body {
   align-items: center;
 }
 
+.img-1 {
+  padding-left: 73px;
+}
+
 .img-2 {
   height: 240px;
   margin-left: 74px;
 }
 
 .slider__item2 {
+  display: none;
   margin-top: -53px;
   margin-left: -40px;
+}
+
+.selected .next {
+  display:block;
+}
+
+@keyframes left {
+  from {left:0;}
+  to {left:-100%;}
+}
+  
+@keyframes right {
+from {left:100%;}
+to {left:0;}
+}
+
+.to-left {
+animation-name:left;
+}
+
+.from-right {
+animation-name:right;
+}
+
+.to-right {
+animation-name:right;
+animation-direction:reverse;
+}
+
+.from-left {
+animation-name:left;
+animation-direction:reverse;
 }
 
 .services {
@@ -245,7 +291,7 @@ body {
 .services__item {
   margin-bottom: 30px;
   padding-left: 7.9rem;
-  width: 30.2rem;
+  width: 33%;
   height: 9.3rem;
   overflow: hidden;
   position: relative;
@@ -388,9 +434,12 @@ body {
 .about__cards {
   display: flex;
   justify-content: space-between;
-  width: 940px;
+  width: 100%;
 }
 
+.about__photo {
+  max-width: 100%;
+}
 
 .about__name {
   font-family: "Lato Black", sans-serif;
@@ -414,7 +463,7 @@ body {
 }
 
 .about__card {
-  width: 300px;
+  width: 33%;
 }
 
 .social-icons {
@@ -660,4 +709,63 @@ body {
 .footer__social-icons {
   margin-top: 22px;
   margin-right: 1px;
+}
+
+@media (max-width:778px) {
+  
+  .slider {
+      height: 452px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .slider__content {
+      height: 407px;
+  }
+
+  .slider__item {
+      justify-content: center;
+      align-items: center;
+  }
+
+  .img-1 {
+      padding: 0;
+      margin-right: 35px;
+  }
+  .img-1 {
+      width: 200px;
+  }
+  .img-2 {
+      padding: 0;
+      margin-top: 55px;
+  }
+  .img-2 {
+      width: 350px;
+  }
+
+  .arrow-prev::before {
+      top: 200px;
+      z-index: 5;
+  }
+  .arrow-next::before {
+      top: 200px;
+      z-index: 5;
+  }
+
+  .services {
+    height: 630px;
+  }
+
+  .services__item {
+    width: 49%;
+  }
+
+  .footer__copyright {
+    display: none;
+  }
+
+  .footer__info {
+    justify-content: center;
+  }
 }
